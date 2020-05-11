@@ -29,7 +29,7 @@ jobs:
       - name: Emit coverage file
         shell: bash
         run: |
-          julia -e <<CODE
+          julia <<CODE
           using Pkg
           Pkg.add("Coverage")
           using Coverage
