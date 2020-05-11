@@ -1,0 +1,13 @@
+name = "Tmp"
+uuid = "c7f71337-17d6-40ef-a300-c8142fb51738"
+authors = ["Kenta Sato <bicycle1885@gmail.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
