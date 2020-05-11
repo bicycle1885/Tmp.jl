@@ -1,5 +1,5 @@
 module Tmp
 
-# Write your package code here.
+f(n) = 2n
 
 end

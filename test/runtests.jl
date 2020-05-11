@@ -1,6 +1,7 @@
-using Tmp
+using Tmp: f
 using Test
 
 @testset "Tmp.jl" begin
-    # Write your tests here.
+    @test f(2) == 4
+    @test f(5) == 10
 end
