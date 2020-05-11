@@ -26,6 +26,7 @@ jobs:
           arch: ${{ matrix.arch }}
       - uses: julia-actions/julia-buildpkg@latest
       - uses: julia-actions/julia-runtest@latest
-      - uses: julia-actions/julia-uploadcodecov@latest
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - run: julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; LCOV.writefile("lcov.txt", process_folder())'
+      - uses: codecov/codecov-action@v1
+        with:
+          file: ./lcov.txt
